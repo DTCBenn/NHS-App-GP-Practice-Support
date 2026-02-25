@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NHS App Staff Help</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>NHS App Staff Help</h1>
+
+    <div class="banner">
+      <strong>For practice staff support only.</strong>
+      <span>Do not enter patient-identifiable information (NHS number, DOB, address, screenshots, names).</span>
+      <span>Non-clinical guidance only.</span>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="panel">
+      <h2>Quick actions</h2>
+      <div class="chips" id="chips">
+        <button data-q="Patient can’t log in (NHS login). What should we check first?">Login issues</button>
+        <button data-q="Patient says their GP record is not connected in the NHS App. What causes this and what can we do?">Record not connected</button>
+        <button data-q="How does proxy access usually fail and what are the common fixes?">Proxy access</button>
+        <button data-q="Patient can’t see repeat prescriptions in the NHS App. What are the most common reasons?">Repeat prescriptions</button>
+        <button data-q="Patient can’t book appointments in the NHS App. What should we check?">Appointments</button>
+        <button data-q="Patient says they’re not receiving notifications/messages. What should we advise?">Messages & notifications</button>
+      </div>
+
+      <h2>Knowledge base</h2>
+      <p class="muted">
+        These pages contain your local guidance. Keep them up to date and the bot will stay accurate.
+      </p>
+      <ul class="links">
+        <li><a href="kb/faq.md" target="_blank" rel="noreferrer">FAQ (editable)</a></li>
+        <li><a href="kb/flows.md" target="_blank" rel="noreferrer">Troubleshooting flows (editable)</a></li>
+      </ul>
+    </section>
+
+    <section class="panel chat">
+      <h2>Ask the bot</h2>
+
+      <div class="chatlog" id="chatlog" aria-live="polite"></div>
+
+      <div class="inputrow">
+        <textarea id="msg" rows="3" placeholder="Describe the issue (no patient data). E.g. ‘Patient can’t link record, says practice not found.’"></textarea>
+        <button id="send">Send</button>
+      </div>
+
+      <p class="muted">
+        Tip: include what stage fails (login vs verification vs record linkage), device type, and exact error wording (no screenshots).
+      </p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span class="muted">Built for practice staff: NHS App support, signposting, and process guidance.</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
